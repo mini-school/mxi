@@ -1,0 +1,3 @@
+LMS_HOSTNAME=courses.minischool.co.in
+CMS_HOSTNAME=studio.courses.minischool.co.in
+DOCKER_IMAGE_OPENEDX=255290222663.dkr.ecr.ap-south-1.amazonaws.com/openedx:latest
