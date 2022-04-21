@@ -15,7 +15,7 @@
 #factory_boy
 #django-debug-toolbar
 
--e ./geogebra_xblock
--e ./hdrXblock
--e ./swxblock
--e ./custom-edx-plugin
+#-e ./geogebra_xblock
+#-e ./hdrXblock
+#-e ./swxblock
+#-e ./custom-edx-plugin
