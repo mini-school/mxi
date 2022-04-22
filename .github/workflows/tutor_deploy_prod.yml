@@ -252,9 +252,9 @@ jobs:
       - name: Patch Generated Configuration (Static)
         run:  |-
           echo "config.yml full path: $(tutor config printroot)/config.yml"
-          #cat "$(tutor config printroot)/config.yml"
-          #echo ""
-          #echo ""
+          cat "$(tutor config printroot)/config.yml"
+          echo ""
+          echo ""
 
 
           cd $TUTOR_ROOT/env/apps/openedx/config/
