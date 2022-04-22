@@ -293,7 +293,7 @@ jobs:
 
       - name: Deploy Tutor config save
         run:  |-
-          tutor k8s config save
+          tutor config save
 
       - name: Deploy Tutor
         run:  |-
