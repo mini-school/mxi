@@ -33,6 +33,6 @@ spec:
   issuerRef:
     kind: ClusterIssuer
     name: letsencrypt
-  commonName: courses.minischool.co.in
+  commonName: minischool.co.in
   dnsNames:
-    - "*.courses.minischool.co.in"
+    - "*.minischool.co.in"
