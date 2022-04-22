@@ -26,11 +26,11 @@ metadata:
 spec:
   tls:
   - hosts:
-    - "courses.minischool.co.in"
-    - "*.courses.minischool.co.in"
+    - "minischool.co.in"
+    - "*.minischool.co.in"
     secretName: wild-openedx-prod-tls
   rules:
-  - host: courses.minischool.co.in
+  - host: minischool.co.in
     http:
       paths:
       - path: /
@@ -40,7 +40,7 @@ spec:
             name: lms
             port:
               number: 8000
-  - host: studio.courses.minischool.co.in
+  - host: studio.minischool.co.in
     http:
       paths:
       - path: /
