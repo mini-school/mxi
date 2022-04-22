@@ -2,8 +2,7 @@
     "CORS_ORIGIN_ALLOW_ALL": true,
     "CORS_ORIGIN_WHITELIST": [
         "https://minischool.co.in",
-        "https://studio.minischool.co.in",
-        "https://preview.minischool.co.in"
+        "https://studio.minischool.co.in"
     ],
     "CROSS_DOMAIN_CSRF_COOKIE_DOMAIN": "minischool.co.in",
     "CROSS_DOMAIN_CSRF_COOKIE_NAME": "native-csrf-cookie",
@@ -22,7 +21,7 @@
     "FACEBOOK_API_VERSION": "v12.0",
     "FEATURES": {
         "ENABLE_DASHBOARD_SEARCH": true,
-        "AUTH_USE_OPENID_PROVIDER": true,
+        "AUTH_USE_OPENID_PROVIDER": false,
         "AUTOMATIC_AUTH_FOR_TESTING": false,
         "CUSTOM_COURSES_EDX": false,
         "ENABLE_BULK_ENROLLMENT_VIEW": false,
@@ -50,7 +49,7 @@
         "ENABLE_SYSADMIN_DASHBOARD": false,
         "ENABLE_THIRD_PARTY_AUTH": false,
         "ENABLE_VIDEO_UPLOAD_PIPELINE": true,
-        "PREVIEW_LMS_BASE": "preview.minischool.co.in/",
+        "PREVIEW_LMS_BASE": "minischool.co.in/",
         "SHOW_FOOTER_LANGUAGE_SELECTOR": false,
         "SHOW_HEADER_LANGUAGE_SELECTOR": false
     },
