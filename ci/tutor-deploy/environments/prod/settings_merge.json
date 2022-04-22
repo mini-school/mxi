@@ -2,10 +2,10 @@
     "CORS_ORIGIN_ALLOW_ALL": true,
     "CORS_ORIGIN_WHITELIST": [
         "https://minischool.co.in",
-        "https://courses.minischool.co.in",
-        "https://studio.courses.minischool.co.in"
+        "https://studio.minischool.co.in"
+        "https://preview.minischool.co.in"
     ],
-    "CROSS_DOMAIN_CSRF_COOKIE_DOMAIN": "courses.minischool.co.in",
+    "CROSS_DOMAIN_CSRF_COOKIE_DOMAIN": "minischool.co.in",
     "CROSS_DOMAIN_CSRF_COOKIE_NAME": "native-csrf-cookie",
     "CSRF_COOKIE_SECURE": true,
     "CSRF_TRUSTED_ORIGINS": [],
@@ -16,13 +16,13 @@
     "AWS_SES_REGION_NAME": "ap-south-1",
     "CREDIT_HELP_LINK_URL": "https://minischool.co.in/support/",
     "DEFAULT_MOBILE_AVAILABLE": false,
-    "DEFAULT_EMAIL_LOGO_URL": "https://cdn.courses.minischool.co.in",
+    "DEFAULT_EMAIL_LOGO_URL": "https://cdn.minischool.co.in",
     "ENTERPRISE_SUPPORT_URL": "https://minischool.co.in/support/",
     "ENTERPRISE_TAGLINE": "minischool",
     "FACEBOOK_API_VERSION": "v12.0",
     "FEATURES": {
         "ENABLE_DASHBOARD_SEARCH": true,
-        "AUTH_USE_OPENID_PROVIDER": false,
+        "AUTH_USE_OPENID_PROVIDER": true,
         "AUTOMATIC_AUTH_FOR_TESTING": false,
         "CUSTOM_COURSES_EDX": false,
         "ENABLE_BULK_ENROLLMENT_VIEW": false,
@@ -50,14 +50,14 @@
         "ENABLE_SYSADMIN_DASHBOARD": false,
         "ENABLE_THIRD_PARTY_AUTH": false,
         "ENABLE_VIDEO_UPLOAD_PIPELINE": true,
-        "PREVIEW_LMS_BASE": "courses.minischool.co.in/",
+        "PREVIEW_LMS_BASE": "preview.minischool.co.in/",
         "SHOW_FOOTER_LANGUAGE_SELECTOR": false,
         "SHOW_HEADER_LANGUAGE_SELECTOR": false
     },
     "ID_VERIFICATION_SUPPORT_LINK": "https://minischool.co.in/support/",
     "LANGUAGE_CODE": "en",
     "LANGUAGE_COOKIE": "openedx-language-preference",
-    "LOGO_URL_PNG": "https://cdn.courses.minischool.co.in",
+    "LOGO_URL_PNG": "https://cdn.minischool.co.in",
     "PLATFORM_DESCRIPTION": "Mini School",
     "PLATFORM_FACEBOOK_ACCOUNT": "http://www.facebook.com/",
     "PLATFORM_NAME": "minischool",
@@ -74,12 +74,12 @@
         "terms_of_service": "hidden",
         "year_of_birth": "hidden"
     },
-    "SESSION_COOKIE_DOMAIN": "courses.minischool.co.in",
+    "SESSION_COOKIE_DOMAIN": "minischool.co.in",
     "SESSION_COOKIE_NAME": "sessionid",
     "SESSION_COOKIE_SECURE": true,
     "SOCIAL_AUTH_REDIRECT_IS_HTTPS": true,
     "SOCIAL_AUTH_RAISE_EXCEPTIONS": false,
-    "SOCIAL_AUTH_BACKEND_ERROR_URL": "https://courses.minischool.co.in/oauth-error",
+    "SOCIAL_AUTH_BACKEND_ERROR_URL": "https://minischool.co.in/oauth-error",
     "SOCIAL_MEDIA_FOOTER_URLS": {
         "linkedin": "https://www.linkedin.com/",
         "twitter": "https://twitter.com/",
