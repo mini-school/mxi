@@ -279,22 +279,10 @@ jobs:
       #------------------------------------------------------------------------
       # V. Deploy Open edX
       #------------------------------------------------------------------------
-      - name: Deploy Tutor plugin list
+      - name: Deploy Tutor Android
         run:  |-
-          tutor plugins list
+          pip install tutor-android
           
-      #- name: Deploy Tutor config save
-      #  run:  |-
-      #    tutor k8s config save
-
-      - name: Deploy Tutor
-        run:  |-
-          tutor k8s start
-
-      - name: Run tutor init
-        run:  |-
-          tutor k8s init
-
       - name: Deploy Tutor plugin list
         run:  |-
           tutor plugins list
@@ -306,10 +294,6 @@ jobs:
       - name: Deploy Tutor config save
         run:  |-
           tutor k8s config save
-
-      - name: Deploy Tutor Stop
-        run:  |-
-          tutor k8s stop
 
       - name: Deploy Tutor
         run:  |-
