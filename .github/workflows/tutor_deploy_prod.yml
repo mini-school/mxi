@@ -281,7 +281,7 @@ jobs:
       #------------------------------------------------------------------------
       - name: Deploy Tutor enable android
         run:  |-
-          tutor k8s enable android
+          tutor plugins enable android
           
       - name: Deploy Tutor config save
         run:  |-
