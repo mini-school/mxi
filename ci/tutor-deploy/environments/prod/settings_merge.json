@@ -2,7 +2,7 @@
     "CORS_ORIGIN_ALLOW_ALL": true,
     "CORS_ORIGIN_WHITELIST": [
         "https://minischool.co.in",
-        "https://studio.minischool.co.in"
+        "https://studio.minischool.co.in",
         "https://preview.minischool.co.in"
     ],
     "CROSS_DOMAIN_CSRF_COOKIE_DOMAIN": "minischool.co.in",
