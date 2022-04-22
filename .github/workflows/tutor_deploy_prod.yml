@@ -252,32 +252,29 @@ jobs:
       - name: Patch Generated Configuration (Static)
         run:  |-
           echo "config.yml full path: $(tutor config printroot)/config.yml"
-          cat "$(tutor config printroot)/config.yml"
-          echo ""
-          echo ""
+          #cat "$(tutor config printroot)/config.yml"
+          #echo ""
+          #echo ""
 
 
           cd $TUTOR_ROOT/env/apps/openedx/config/
 
+          mv lms.env.json lms.env.json.orig
+          jq -s '.[0] * .[1]'  lms.env.json.orig  "$GITHUB_WORKSPACE/ci/tutor-deploy/environments/$ENVIRONMENT_ID/settings_merge.json" >  lms.env.json
+
+          echo 'Tutor lms.env.json contents:'
+          cat lms.env.json
+          echo ""
+          echo ""
+
+          mv cms.env.json cms.env.json.orig
+          jq -s '.[0] * .[1]'  cms.env.json.orig  "$GITHUB_WORKSPACE/ci/tutor-deploy/environments/$ENVIRONMENT_ID/settings_merge.json" >  cms.env.json
           rm *orig
 
-          mv lms.env.json lms.env.json1.orig
-          jq -s '.[0] * .[1]'  lms.env.json1.orig  "$GITHUB_WORKSPACE/ci/tutor-deploy/environments/$ENVIRONMENT_ID/settings_merge.json" >  lms.env.json
-
-
-          mv cms.env.json cms.env.json1.orig
-          jq -s '.[0] * .[1]'  cms.env.json1.orig  "$GITHUB_WORKSPACE/ci/tutor-deploy/environments/$ENVIRONMENT_ID/settings_merge.json" >  cms.env.json
-          rm *orig
-
-#          echo 'Tutor lms.env.json contents:'
-#          cat lms.env.json
-#          echo ""
-#          echo ""
-
-#          echo 'Tutor cms.env.json contents:'
-#          cat cms.env.json
-#          echo ""
-#          echo ""
+          echo 'Tutor cms.env.json contents:'
+          cat cms.env.json
+          echo ""
+          echo ""
 
       #------------------------------------------------------------------------
       # V. Deploy Open edX
