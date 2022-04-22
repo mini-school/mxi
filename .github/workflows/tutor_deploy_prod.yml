@@ -311,3 +311,7 @@ jobs:
         run:  |-
           $(kubectl get secret admin-edx -n $NAMESPACE  -o json | jq  '.data | map_values(@base64d)' |   jq -r 'keys[] as $k | "export \($k|ascii_upcase)=\(.[$k])"')
           tutor k8s createuser --password "$ADMIN_PASSWORD" --staff --superuser "$ADMIN_USER" admin@minischool.co.in
+
+      - name: Import Demo course
+        run:  |-
+          tutor k8s importdemocourse
