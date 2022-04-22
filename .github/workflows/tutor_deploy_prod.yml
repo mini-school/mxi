@@ -279,9 +279,12 @@ jobs:
       #------------------------------------------------------------------------
       # V. Deploy Open edX
       #------------------------------------------------------------------------
-       - name: Enable Tutor Android
-       run:  |-
+      - name: Deploy Tutor enable android
+        run:  |-
           tutor k8s enable android
+          
+      - name: Deploy Tutor config save
+        run:  |-
           tutor k8s config save
 
       - name: Deploy Tutor
