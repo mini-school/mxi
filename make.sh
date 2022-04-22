@@ -24,4 +24,3 @@ cookiecutter --checkout $GITHUB_BRANCH \
              global_root_domain=minischool.co.in \
              global_aws_route53_hosted_zone_id=Z0135246YPNCZW2WATG5 \
              environment_name=prod \
-             environment_subdomain=
