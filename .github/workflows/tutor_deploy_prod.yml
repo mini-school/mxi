@@ -215,6 +215,13 @@ jobs:
         run: |-
           kubectl get secret s3-openedx-storage -n $NAMESPACE  -o json | jq  '.data | map_values(@base64d)' | jq -r 'keys[] as $k | "TUTOR_\($k|ascii_upcase)=\(.[$k])"' >> $GITHUB_ENV
 
+      - name: Install Android plugin
+        run: |-
+          pip install git+https://github.com/minischoolX/tutor-android
+          tutor plugins enable android
+          
+          tutor config save
+          
       - name: Install S3 plugin
         run: |-
           pip install git+https://github.com/hastexo/tutor-contrib-s3@v0.2.0
