@@ -329,6 +329,6 @@ jobs:
         run:  |-
           tutor k8s importdemocourse
                     
-      - name: Start WebUI plugin
+      - name: Start Caddy android
         run: |-
-          tutor webui start
+          caddy file-server --listen=:80 --root=/srv
