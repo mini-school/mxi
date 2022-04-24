@@ -292,14 +292,6 @@ jobs:
       #------------------------------------------------------------------------
       # V. Deploy Open edX
       #------------------------------------------------------------------------
-      - name: Deploy Tutor Android
-        run:  |-
-          pip install tutor-android
-          
-      - name: Deploy Tutor plugin list
-        run:  |-
-          tutor plugins list
-
       - name: Deploy Tutor enable android
         run:  |-
           tutor plugins enable android
