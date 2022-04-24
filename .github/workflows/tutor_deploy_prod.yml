@@ -215,6 +215,12 @@ jobs:
         run: |-
           kubectl get secret s3-openedx-storage -n $NAMESPACE  -o json | jq  '.data | map_values(@base64d)' | jq -r 'keys[] as $k | "TUTOR_\($k|ascii_upcase)=\(.[$k])"' >> $GITHUB_ENV
 
+      - name: Install WebUI plugin
+        run: |-
+          pip install git+https://github.com/overhangio/tutor-webui
+          tutor plugins enable webui
+          tutor config save
+          
       - name: Install Android plugin
         run: |-
           pip install git+https://github.com/minischoolX/tutor-android
@@ -322,3 +328,7 @@ jobs:
       - name: Import Demo course
         run:  |-
           tutor k8s importdemocourse
+                    
+      - name: Start WebUI plugin
+        run: |-
+          tutor webui start
