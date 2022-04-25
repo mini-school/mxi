@@ -73,13 +73,13 @@ jobs:
           token: ${{ secrets.PAT }}
           ref: main
 
-      - name: Checkout custom edx plugin repo
-        uses: actions/checkout@v2
-        with:
-          repository: mini-school/mini-plugin
-          path: ${{ env.PLUGINS_PATH }}/custom-edx-plugin
-          token: ${{ secrets.PAT }}
-          ref: main
+      #- name: Checkout custom edx plugin repo
+      #  uses: actions/checkout@v2
+      #  with:
+      #    repository: mini-school/mini-plugin
+      #    path: ${{ env.PLUGINS_PATH }}/custom-edx-plugin
+      #    token: ${{ secrets.PAT }}
+      #    ref: main
 
       - name: Checkout example xblock repo
         uses: actions/checkout@v2
